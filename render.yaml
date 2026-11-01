@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: detection-fraude-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r deploiement/requirements_api.txt
+    startCommand: python -m uvicorn api.principal:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /sante
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.13.5

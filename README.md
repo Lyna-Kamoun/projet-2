@@ -70,7 +70,7 @@ Le coût sans modèle (toutes les fraudes manquées) est de 733 912 sur le test.
 | `modeles/` | Modèles entraînés |
 | `tests/` | Tests automatiques |
 | `captures/` | Captures d'écran de l'application |
-| `deploiement/` | Fichiers pour héberger l'API (Docker) |
+| `deploiement/` | Dépendances du service d'API pour l'hébergement (voir `render.yaml` à la racine) |
 
 ## Installation
 
@@ -135,7 +135,7 @@ Le réglage et les entraînements sont longs ; les résultats déjà produits so
 
 ## Déploiement
 
-L'application se déploie sur Streamlit Community Cloud avec `app/Accueil.py` comme fichier principal. L'API se déploie comme un espace Docker : `python deploiement/preparer_espace_api.py` assemble dans `deploiement/espace_api/` les fichiers à envoyer vers l'espace.
+L'API se déploie sur Render à partir de `render.yaml` (service web Python, offre gratuite) : Nouveau, Blueprint, choix du dépôt. Un service gratuit s'endort après 15 minutes sans appel et met environ une minute à se réveiller. L'application se déploie sur Streamlit Community Cloud avec `app/Accueil.py` comme fichier principal ; l'adresse de l'API est donnée par la variable `URL_API`.
 
 ## Source des données
 

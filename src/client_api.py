@@ -4,7 +4,7 @@ import os
 import httpx
 import pandas as pd
 
-DELAI_SECONDES = 20.0
+DELAI_SECONDES = 70.0
 
 
 class ErreurAPI(Exception):

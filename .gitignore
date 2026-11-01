@@ -8,4 +8,3 @@ donnees/
 .streamlit/secrets.toml
 .DS_Store
 Thumbs.db
-deploiement/espace_api/

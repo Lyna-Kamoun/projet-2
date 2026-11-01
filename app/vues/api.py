@@ -49,8 +49,9 @@ if not adresse.strip():
     st.info("Aucune adresse renseignée : les résultats ci-dessous sont calculés localement avec le même modèle. Pour appeler le service, démarrer l'API (`python -m uvicorn api.principal:app --port 8000`) puis saisir http://localhost:8000.")
 elif tester:
     try:
-        sante = client_api.appeler(adresse, "GET", "/sante", cle=cle or None)
-        description = client_api.appeler(adresse, "GET", "/modele", cle=cle or None)
+        with st.spinner("Appel du service. S'il était endormi, il peut mettre environ une minute à répondre."):
+            sante = client_api.appeler(adresse, "GET", "/sante", cle=cle or None)
+            description = client_api.appeler(adresse, "GET", "/modele", cle=cle or None)
         st.success(f"Service {sante['modele']} version {sante['version']} joignable. Seuil par défaut : {application.pourcentage(description['seuil_par_defaut'], 2)}, coût d'analyse : {application.nombre(description['cout_alerte'])}.")
     except client_api.ErreurAPI as erreur:
         st.error(str(erreur))
@@ -111,7 +112,8 @@ if adresse.strip():
     if seuil_choisi > 0:
         options["seuil"] = seuil_choisi
     try:
-        reponse = client_api.appeler(adresse, "POST", "/expliquer", charge=charge, parametres=options, cle=cle or None)
+        with st.spinner("Appel du service. S'il était endormi, il peut mettre environ une minute à répondre."):
+            reponse = client_api.appeler(adresse, "POST", "/expliquer", charge=charge, parametres=options, cle=cle or None)
         origine = "service"
     except client_api.ErreurAPI as erreur:
         st.error(str(erreur))
