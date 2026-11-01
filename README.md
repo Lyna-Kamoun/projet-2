@@ -5,6 +5,13 @@ Projet du cours Data Mining pour la finance (ENSI, 2026-2027), Challenge 2.
 
 Le projet classe les transactions par niveau de risque, signale les plus suspectes dans un budget d'alertes donné, fixe le seuil d'alerte à partir d'un coût exprimé en montants, et explique chaque alerte avec SHAP.
 
+## Démonstration en ligne
+
+- Application : https://detection-fraude-explicable.streamlit.app
+- API (documentation interactive) : https://detection-fraude-api.onrender.com/docs
+
+Les deux services sont gratuits et s'endorment après une période d'inactivité : la première ouverture, ou le premier appel de l'API, peut prendre une minute.
+
 ## Données
 
 Simulateur Sparkov, jeu `kartik2112/fraud-detection` sur Kaggle (licence CC0) : 1 852 394 transactions de 999 cartes, du 1er janvier 2019 au 31 décembre 2020, dont 9 651 fraudes (0,52 %). Les fichiers `fraudTrain.csv` et `fraudTest.csv` sont rassemblés puis triés par date.
