@@ -1,0 +1,87 @@
+{
+  "vrai_positif": {
+    "date": "2020-09-13 22:03:41",
+    "montant": 949.4,
+    "categorie": "shopping_net",
+    "fraude": 1,
+    "probabilite_corrigee": 0.9537,
+    "alerte": true,
+    "codes_motifs": [
+      {
+        "code": "MONTANT",
+        "libelle": "Montant : 949,40",
+        "contribution": 8.273
+      },
+      {
+        "code": "HEURE",
+        "libelle": "Heure de la transaction : 22 h",
+        "contribution": 1.468
+      },
+      {
+        "code": "RATIO_MOYENNE_30J",
+        "libelle": "Montant égal à 8,0 fois la moyenne des 30 derniers jours",
+        "contribution": 0.296
+      },
+      {
+        "code": "VELOCITE_24H",
+        "libelle": "5 transaction(s) de la carte sur 24 heures",
+        "contribution": 0.258
+      },
+      {
+        "code": "DISTANCE",
+        "libelle": "Distance porteur-marchand : 114 km",
+        "contribution": 0.17
+      }
+    ]
+  },
+  "faux_positif": {
+    "date": "2020-12-17 23:38:26",
+    "montant": 989.33,
+    "categorie": "shopping_pos",
+    "fraude": 0,
+    "probabilite_corrigee": 0.9927,
+    "alerte": true,
+    "codes_motifs": [
+      {
+        "code": "MONTANT",
+        "libelle": "Montant : 989,33",
+        "contribution": 7.494
+      },
+      {
+        "code": "HEURE",
+        "libelle": "Heure de la transaction : 23 h",
+        "contribution": 1.814
+      },
+      {
+        "code": "DELAI_PRECEDENTE",
+        "libelle": "Délai depuis la transaction précédente : 4 min",
+        "contribution": 0.961
+      },
+      {
+        "code": "VELOCITE_1H",
+        "libelle": "2 transaction(s) de la carte sur la dernière heure",
+        "contribution": 0.656
+      },
+      {
+        "code": "DISTANCE",
+        "libelle": "Distance porteur-marchand : 67 km",
+        "contribution": 0.309
+      }
+    ]
+  },
+  "fraude_manquee": {
+    "date": "2020-10-25 14:10:36",
+    "montant": 1134.02,
+    "categorie": "shopping_net",
+    "fraude": 1,
+    "probabilite_corrigee": 0.0146,
+    "alerte": false,
+    "codes_motifs": [
+      {
+        "code": "MONTANT",
+        "libelle": "Montant : 1134,02",
+        "contribution": 4.773
+      }
+    ]
+  }
+}

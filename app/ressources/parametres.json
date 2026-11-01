@@ -1,0 +1,28 @@
+{
+  "cout_alerte": 5.0,
+  "alertes_par_jour": 20.0,
+  "beta": 0.11585153411430407,
+  "seuils": {
+    "xgboost": 0.027218025359384283,
+    "logistique": 0.038680738604644875,
+    "isolation_forest": 0.47738071548397365
+  },
+  "jeux": {
+    "validation": {
+      "transactions": 370479,
+      "fraudes": 1901,
+      "jours": 139.77135416666667,
+      "debut": "2020-04-07 07:00:36",
+      "fin": "2020-08-25 01:31:21",
+      "cout_sans_modele": 989313.46
+    },
+    "test": {
+      "transactions": 370479,
+      "fraudes": 1349,
+      "jours": 128.93582175925926,
+      "debut": "2020-08-25 01:31:59",
+      "fin": "2020-12-31 23:59:34",
+      "cout_sans_modele": 733911.72
+    }
+  }
+}
